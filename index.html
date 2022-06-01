@@ -3,35 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="https://fonts.google.com/specimen/Red+Hat+Display">
+  <link rel="stylesheet" href="styles.css">
   <title>Frontend Mentor | Order summary card</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
-
-  Order Summary
-
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
-
-  Annual Plan
-  $59.99/year
-
-  Change
-
-  Proceed to Payment
-  Cancel Order
+  <main>
+    <img src="images/illustration-hero.svg" alt="" class="picture">
+    <div class="summary-card">
+      <h1>Order Summary</h1>
+      <p>
+        You can now listen to millions of songs, audiobooks, and podcasts on any 
+        device anywhere you like!
+      </p>
+      <div class="payment-plan">
+        <img src="images/icon-music.svg" alt="">
+        <div class="plan-details">
+          <span class="plan-name">Annual Plan</span> 
+          <span class="price">$59.99/year</span>
+        </div>
+        <a href="#">Change</a>
+      </div>
+      <button class="payment-button">Proceed to Payment</button>
+      <a href="#" class="cancel-button">Cancel Order</a>
+    </div>
+  </main>
   
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+  <footer class="attribution">
+    <span>Challenge by &nbsp;<a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>&nbsp;| 
+    Coded by &nbsp;<a href="https://www.linkedin.com/in/nhatkhanhgiang2512/">Giang Nhật Khánh (Kayden)</a></span>
+  </footer>
 </body>
 </html>

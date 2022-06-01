@@ -1,0 +1,212 @@
+@font-face {
+    font-family: "Red-Hat-Display-Medium";
+    src: url(Red_Hat_Display/static/RedHatDisplay-Medium.ttf);
+}
+
+@font-face {
+    font-family: "Red-Hat-Display-Bold";
+    src: url(Red_Hat_Display/static/RedHatDisplay-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Red-Hat-Display-Black";
+    src: url(Red_Hat_Display/static/RedHatDisplay-Black.ttf);
+}
+
+:root {
+    /* Primary colors */
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+
+    /* Neutral colors */
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+
+    /* Footer colors */
+    --white: hsl(0, 0%, 100%);
+    --black: hsl(0, 0%, 0%);
+
+    /* Font size */
+    font-size: 15px;
+}
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-image: url(images/pattern-background-mobile.svg);
+    background-color: var(--pale-blue);
+    background-repeat: repeat-x; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.picture,
+.summary-card {
+    width: clamp(20rem, 22rem, 26rem);
+}
+
+.picture {
+    border-radius: 1.2rem 1.2rem 0 0;
+    object-fit: cover;
+}
+
+.summary-card {
+    background-color: var(--white);
+    padding: 2rem 2rem;
+    border-radius: 0 0 1.2rem 1.2rem;
+    box-shadow: 0 1rem 1rem 1rem hsla(225, 100%, 90%, 1);
+}
+
+.summary-card h1, 
+.summary-card p {
+    text-align: center;
+}
+
+.summary-card h1 {
+    font-family: "Red-Hat-Display-Black", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    color: var(--dark-blue);
+}
+
+.summary-card p {
+    font-family: "Red-Hat-Display-Medium", sans-serif;
+    font-size: 1.06rem;
+    color: var(--desaturated-blue);
+}
+
+.payment-plan {
+    display: flex;
+    align-items: center;
+    margin: 1.4rem 0;
+    background-color: var(--very-pale-blue);
+    padding: 1.2rem 1.2rem;
+    border-radius: 0.8rem;
+}
+
+.plan-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 1.4rem;
+}
+
+.plan-details .plan-name,
+.plan-details .price {
+    font-size: 1rem;
+}
+
+.plan-details .plan-name {
+    font-family: "Red-Hat-Display-Black", sans-serif;
+    color: var(--dark-blue);
+}
+
+.plan-details .price {
+    font-family: "Red-Hat-Display-Medium", sans-serif;
+    color: var(--desaturated-blue);
+}
+
+.payment-plan a {
+    margin-left: auto;
+    font-family: "Red-Hat-Display-Bold", sans-serif;
+    font-size: 1rem;
+    color: var(--bright-blue);
+    transition: 0.3s ease-in-out;
+}
+
+.summary-card .payment-button {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 0.5rem 0 1.5rem;
+    background-color: var(--bright-blue);
+    font-family: "Red-Hat-Display-Bold", sans-serif;
+    font-size: 1rem;
+    color: var(--white);
+    border: none;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.8rem 1rem 0.5rem hsla(225, 100%, 90%, 1);
+    transition: 0.3s ease-in-out;
+}
+
+.summary-card .cancel-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Red-Hat-Display-Black", sans-serif;
+    font-size: 1rem;
+    color: var(--desaturated-blue);
+    text-decoration: none;
+    transition: 0.3s ease-in-out;
+}
+
+.payment-plan a:hover,
+.summary-card .payment-button:hover {
+    opacity: 0.7;
+    text-decoration: none;
+}
+
+.summary-card .cancel-button:hover {
+    color: var(--dark-blue);
+}
+
+.attribution {
+    width: 100%;
+    flex-direction: row;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--black);   
+}
+
+.attribution span {
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+.attribution span a {
+    color: hsl(228, 45%, 44%); 
+}
+
+@media screen and (min-width: 900px) {
+    body {
+        background-image: url(images/pattern-background-desktop.svg);
+    }
+
+    .picture,
+    .summary-card {
+        width: clamp(22rem, 28rem, 30rem);
+    }
+
+    .summary-card {
+        padding: 2.4rem 3rem;
+    }
+
+    .summary-card h1 {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+    }
+
+    .summary-card p {
+        margin: 0 1rem;
+    }
+}
+
