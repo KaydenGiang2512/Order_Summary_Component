@@ -17,8 +17,8 @@ This is a solution to the [Order summary component challenge on Frontend Mentor]
 
 ### Links
 
-- Solution URL: ()
-- Live Site URL: ()
+- Solution URL: (https://www.frontendmentor.io/solutions/responsive-order-summary-component-using-html5-and-css3-mF-nWiSvPq)
+- Live Site URL: (https://kaydengiang2512.github.io/Order_Summary_Component/)
 
 ## My process
 
